@@ -1,0 +1,35 @@
+<h1 style="text-align: center;">Product List</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product Id</th>
+      <th>Category</th>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Discount</th>
+      <th>img</th>
+      <th>IsActive</th>
+      <th>Created On</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.productId }}</td>
+      <td>{{ product.category }}</td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.discount }}</td>
+      <td>{{ product.isActive }}</td>
+      <td>{{ product.city }}</td>
+      <td>{{ product.createdOn }}</td>
+      <td (click)="deleteProduct(product.productId)">
+        <span class="material-icons" style="padding-right: 10px">
+          delete_outline
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
