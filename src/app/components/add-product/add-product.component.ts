@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
 
-
-
 @Component({
-  selector: 'app-product-add',
-  templateUrl: './product-add.component.html',
-  styleUrls: ['./product-add.component.css']
+  selector: 'app-add-product',
+  templateUrl: './add-product.component.html',
+  styleUrls: ['./add-product.component.css']
 })
-export class ProductAddComponent implements OnInit {
+export class AddProductComponent implements OnInit {
+
   error: any;
   constructor(private productService: DataService) { }
 
@@ -28,7 +27,7 @@ export class ProductAddComponent implements OnInit {
   addProduct() {
     if (this.form.valid) {
       this.error = null;
-      this.productService.addProduct(this.form.value).subscribe((_res: any) => {
+      this.productService.addProduct(this.form.value).subscribe((res: any) => {
         alert('Successfully Added');
       }, (error: any) => {
         alert('Something went wrong');
