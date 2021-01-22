@@ -1,0 +1,47 @@
+<div style="
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  ">
+  <mat-card style="width: 300px;">
+    <mat-card-title>Add Product</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="addProduct()">
+        <p>
+          <mat-form-field>
+            <input type="number" matInput placeholder="ProductId" formControlName="ProductId" required />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Category" formControlName="Category" required />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Title" formControlName="Title" required />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Name" formControlName="Name" required />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Discount" formControlName="Discount" required />
+          </mat-form-field>
+        </p>
+        <p>
+          <input type="image" placeholder="image" formControlName="img" required />
+        </p>
+
+        <div class="button">
+          <button type="submit" mat-button>Add Product</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

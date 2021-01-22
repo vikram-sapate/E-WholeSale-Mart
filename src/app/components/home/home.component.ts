@@ -33,4 +33,9 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['product-list']);
   }
 
+  onProducAddClick(){
+    this.router.navigate(['add-product']);
+
+  }
+
 }

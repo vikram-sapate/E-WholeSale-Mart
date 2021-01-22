@@ -8,6 +8,10 @@ export class DataService {
   server = '';
   constructor(private http: HttpClient) {}
 
+  addProduct(product: any) {
+    return this.http.post(`${this.server}/products`, product);
+  }
+
   getCustomerList() {
     return this.http.get(`${this.server}/customers`);
   }
